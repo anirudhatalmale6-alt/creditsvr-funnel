@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poet Street Capital — Find Out If You Qualify For Debt Relief in 2026</title>
+<meta name="description" content="See how much you could save with a personalized debt relief estimate. Check your options in under 60 seconds — no impact to your credit score.">
+<style>
+:root{
+  --navy:#0f2f4a; --navy2:#13395a; --navy-soft:#eef4f9;
+  --green:#2e9e5b; --green2:#34b36b; --green-soft:#e7f6ee;
+  --ink:#1d2b39; --muted:#5f7183; --line:#e3e9f0;
+  --bg:#f4f8fb; --card:#ffffff; --white:#fff;
+  --shadow:0 18px 50px rgba(15,47,74,.12);
+  --shadow-sm:0 6px 20px rgba(15,47,74,.08);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* Header */
+.hdr{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--line)}
+.hdr-in{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;color:var(--navy);letter-spacing:-.3px}
+.brand .mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;display:grid;place-items:center;font-size:15px;font-weight:800;letter-spacing:.5px;box-shadow:var(--shadow-sm)}
+.brand b{color:var(--green);font-weight:800}
+.hdr-phone{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--navy);font-size:15px}
+.hdr-phone svg{width:18px;height:18px;fill:var(--green)}
+.hdr-phone small{display:block;font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.3px}
+
+/* Progress */
+.progress-wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.progress{height:6px;background:var(--navy-soft);border-radius:99px;margin:18px 0 4px;overflow:hidden}
+.progress > i{display:block;height:100%;width:16%;background:linear-gradient(90deg,var(--green),var(--green2));border-radius:99px;transition:width .4s cubic-bezier(.4,0,.2,1)}
+.progress-lbl{font-size:12px;color:var(--muted);font-weight:600;text-align:right;letter-spacing:.2px}
+
+/* Shell */
+.wrap{max-width:640px;margin:0 auto;padding:20px 20px 40px}
+.intro{text-align:center;margin:14px 0 22px}
+.intro h1{font-size:26px;line-height:1.25;color:var(--navy);margin:0 0 8px;font-weight:800;letter-spacing:-.4px}
+.intro p{margin:0;color:var(--muted);font-size:16px;font-style:italic}
+.badge-row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:14px}
+.tbadge{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:6px 12px;font-size:12.5px;font-weight:700;color:var(--navy);box-shadow:var(--shadow-sm)}
+.tbadge svg{width:14px;height:14px;fill:var(--green)}
+
+/* Card */
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:30px 28px}
+.step{display:none;animation:fade .35s ease}
+.step.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.q{font-size:22px;font-weight:800;color:var(--navy);text-align:center;margin:0 0 6px;letter-spacing:-.3px}
+.q-sub{text-align:center;color:var(--muted);font-size:14px;margin:0 0 22px}
+
+/* Slider */
+.amount{font-size:44px;font-weight:800;color:var(--green);text-align:center;margin:10px 0 18px;letter-spacing:-1px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:99px;background:var(--navy-soft);outline:none;margin:0}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:28px;height:28px;border-radius:50%;background:#fff;border:5px solid var(--green);cursor:pointer;box-shadow:0 3px 10px rgba(46,158,91,.4);transition:transform .1s}
+input[type=range]::-webkit-slider-thumb:active{transform:scale(1.12)}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:#fff;border:5px solid var(--green);cursor:pointer}
+.range-ends{display:flex;justify-content:space-between;margin-top:10px;color:var(--muted);font-size:13px;font-weight:700}
+
+/* Option buttons */
+.opts{display:grid;gap:12px;margin-top:4px}
+.opts.two{grid-template-columns:1fr 1fr}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:#fff;border:2px solid var(--line);border-radius:14px;padding:16px 18px;font-size:16px;font-weight:700;color:var(--navy);cursor:pointer;transition:all .15s;font-family:inherit}
+.opt:hover{border-color:var(--green2);background:var(--green-soft);transform:translateY(-1px)}
+.opt.sel{border-color:var(--green);background:var(--green-soft)}
+.opt .ico{width:26px;height:26px;flex:0 0 26px;display:grid;place-items:center;color:var(--green)}
+.opt .ico svg{width:22px;height:22px;fill:currentColor}
+.opts.two .opt{justify-content:center;text-align:center}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;border:none;border-radius:99px;padding:17px 26px;font-size:17px;font-weight:800;cursor:pointer;font-family:inherit;transition:all .18s;letter-spacing:.2px}
+.btn-primary{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;box-shadow:0 12px 26px rgba(15,47,74,.28)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(15,47,74,.34)}
+.btn-primary svg{width:18px;height:18px;fill:#fff}
+.btn-green{background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;box-shadow:0 12px 26px rgba(46,158,91,.3)}
+.btn-green:hover{transform:translateY(-2px)}
+.nav-row{display:flex;align-items:center;gap:12px;margin-top:22px}
+.btn-back{background:none;border:none;color:var(--muted);font-weight:700;font-size:14px;cursor:pointer;padding:8px 4px;font-family:inherit;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.btn-back svg{width:14px;height:14px;fill:var(--muted)}
+.btn-back:hover{color:var(--navy)}
+
+/* Form */
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.field input,.field select{width:100%;border:2px solid var(--line);border-radius:12px;padding:14px 15px;font-size:15px;font-family:inherit;color:var(--ink);background:#fff;transition:border-color .15s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--green)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+/* Guide bubble */
+.guide{display:flex;align-items:flex-start;gap:12px;margin:22px auto 0;max-width:560px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-sm)}
+.guide img{width:46px;height:46px;flex:0 0 46px;border-radius:50%;object-fit:cover;border:2px solid var(--green-soft)}
+.guide .g-body{font-size:13.5px;color:var(--ink)}
+.guide .g-name{font-weight:800;color:var(--navy);font-size:13px;margin-bottom:2px;display:flex;align-items:center;gap:6px}
+.guide .g-name .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px var(--green-soft)}
+
+/* Result */
+.result{text-align:center;padding:6px 0}
+.result .check{width:64px;height:64px;border-radius:50%;background:var(--green-soft);display:grid;place-items:center;margin:0 auto 16px}
+.result .check svg{width:34px;height:34px;fill:var(--green)}
+.result h2{font-size:24px;color:var(--navy);margin:0 0 6px;font-weight:800}
+.est{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-radius:18px;padding:24px;margin:18px 0}
+.est .lbl{font-size:13px;opacity:.85;font-weight:600;letter-spacing:.3px;text-transform:uppercase}
+.est .big{font-size:40px;font-weight:800;margin:4px 0;letter-spacing:-1px}
+.est .sub{font-size:13px;opacity:.8}
+.result p.fine{font-size:13px;color:var(--muted);margin:14px 0 0}
+
+/* trust strip */
+.trust{max-width:640px;margin:20px auto 0;display:flex;justify-content:center;gap:22px;flex-wrap:wrap;color:var(--muted);font-size:12.5px;font-weight:600}
+.trust span{display:inline-flex;align-items:center;gap:6px}
+.trust svg{width:15px;height:15px;fill:var(--green)}
+
+/* Footer */
+footer{background:#0c2438;color:#9fb4c6;margin-top:44px;padding:32px 20px}
+.foot-in{max-width:900px;margin:0 auto;font-size:12px;line-height:1.7}
+.foot-in .fbrand{color:#fff;font-weight:800;font-size:15px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.foot-in .fbrand .mark{width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.1);display:grid;place-items:center;font-size:12px}
+.foot-in p{margin:0 0 12px}
+.foot-links{display:flex;gap:18px;flex-wrap:wrap;margin:14px 0;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);padding:12px 0}
+.foot-links a{color:#c3d4e2;font-weight:600}
+.foot-links a:hover{color:#fff}
+.disc{font-size:11px;color:#7c93a7;line-height:1.65}
+
+@media(max-width:560px){
+  .intro h1{font-size:22px}
+  .card{padding:24px 18px;border-radius:16px}
+  .amount{font-size:36px}
+  .q{font-size:19px}
+  .est .big{font-size:32px}
+  .hdr-phone small{display:none}
+  .row2{grid-template-columns:1fr}
+  .opts.two{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-in">
+    <a href="#" class="brand"><span class="mark">PS</span>Poet Street <b>Capital</b></a>
+    <a href="tel:+15162416738" class="hdr-phone">
+      <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg>
+      <span><small>Call a specialist</small>(516) 241-6738</span>
+    </a>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress"><i id="bar"></i></div>
+    <div class="progress-lbl" id="stepLbl">Step 1 of 6</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="intro">
+    <h1>Find Out If You Qualify For Debt Relief in 2026</h1>
+    <p>Your path to becoming debt-free starts here.</p>
+    <div class="badge-row">
+      <span class="tbadge"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V5l-9-4zm-1 15-4-4 1.4-1.4L11 13.2l4.6-4.6L17 10l-6 6z"/></svg>No impact to credit score</span>
+      <span class="tbadge"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V5l-9-4z"/></svg>100% Free &amp; Confidential</span>
+      <span class="tbadge"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>Takes under 60 seconds</span>
+    </div>
+  </div>
+
+  <div class="card">
+
+    <!-- STEP 1: debt amount -->
+    <section class="step active" data-step="1">
+      <h2 class="q">How much debt do you have?</h2>
+      <p class="q-sub">Estimate your total unsecured debt (credit cards, loans, medical bills).</p>
+      <div class="amount" id="amtOut">$20,000</div>
+      <input type="range" id="debt" min="5000" max="100000" step="1000" value="20000">
+      <div class="range-ends"><span>$5,000</span><span>$100,000+</span></div>
+      <div class="nav-row">
+        <button class="btn btn-primary" onclick="next()">Next <svg viewBox="0 0 24 24"><path d="M5 12h12l-5 5 1.4 1.4L21 12l-7.6-6.4L12 7l5 5H5z"/></svg></button>
+      </div>
+    </section>
+
+    <!-- STEP 2: debt type -->
+    <section class="step" data-step="2">
+      <h2 class="q">What type of debt is it?</h2>
+      <p class="q-sub">Choose the one that best describes most of your debt.</p>
+      <div class="opts" data-field="debt_type">
+        <button class="opt" onclick="pick(this,'Credit Cards')"><span class="ico"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4H4V6h16v2zM4 12h16v6H4v-6z"/></svg></span>Credit Cards</button>
+        <button class="opt" onclick="pick(this,'Personal Loans')"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm1 16h-2v-1.1c-1.4-.3-2.5-1.2-2.6-2.7h1.7c.1.8.6 1.3 1.9 1.3 1.1 0 1.6-.5 1.6-1.1 0-.7-.4-1-1.9-1.4-1.9-.4-3.1-1.1-3.1-2.7 0-1.3 1-2.2 2.4-2.5V4h2v1.1c1.4.3 2.2 1.3 2.3 2.5h-1.7c-.1-.7-.5-1.1-1.6-1.1-1 0-1.5.5-1.5 1 0 .6.5.9 1.9 1.3 1.9.4 3.1 1.1 3.1 2.8 0 1.3-1 2.3-2.4 2.6V17z"/></svg></span>Personal Loans</button>
+        <button class="opt" onclick="pick(this,'Medical Bills')"><span class="ico"><svg viewBox="0 0 24 24"><path d="M19 8h-2V6a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3v2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2zM9 6c0-.6.4-1 1-1h4c.6 0 1 .4 1 1v2H9V6zm7 10h-3v3h-2v-3H8v-2h3v-3h2v3h3v2z"/></svg></span>Medical Bills</button>
+        <button class="opt" onclick="pick(this,'Other Unsecured Debt')"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>Other Unsecured Debt</button>
+      </div>
+      <div class="nav-row">
+        <button class="btn-back" onclick="prev()"><svg viewBox="0 0 24 24"><path d="M19 12H7l5-5-1.4-1.4L3 12l7.6 6.4L12 17l-5-5h12z"/></svg>Back</button>
+      </div>
+    </section>
+
+    <!-- STEP 3: monthly income -->
+    <section class="step" data-step="3">
+      <h2 class="q">What is your approximate monthly income?</h2>
+      <p class="q-sub">Include wages, retirement, investments, and any rental income.</p>
+      <div class="opts" data-field="monthly_income">
+        <button class="opt" onclick="pick(this,'$5,000+')">$5,000+</button>
+        <button class="opt" onclick="pick(this,'$4,000 - $5,000')">$4,000 – $5,000</button>
+        <button class="opt" onclick="pick(this,'$3,000 - $4,000')">$3,000 – $4,000</button>
+        <button class="opt" onclick="pick(this,'$2,000 - $3,000')">$2,000 – $3,000</button>
+        <button class="opt" onclick="pick(this,'$1,000 - $2,000')">$1,000 – $2,000</button>
+        <button class="opt" onclick="pick(this,'No monthly income')">I don't have monthly income</button>
+      </div>
+      <div class="nav-row">
+        <button class="btn-back" onclick="prev()"><svg viewBox="0 0 24 24"><path d="M19 12H7l5-5-1.4-1.4L3 12l7.6 6.4L12 17l-5-5h12z"/></svg>Back</button>
+      </div>
+    </section>
+
+    <!-- STEP 4: behind on payments -->
+    <section class="step" data-step="4">
+      <h2 class="q">Are you behind on any payments?</h2>
+      <p class="q-sub">This helps us match you to the right program — there's no wrong answer.</p>
+      <div class="opts" data-field="behind">
+        <button class="opt" onclick="pick(this,'Yes, more than 3 months')">Yes — more than 3 months behind</button>
+        <button class="opt" onclick="pick(this,'Yes, 1-3 months')">Yes — 1 to 3 months behind</button>
+        <button class="opt" onclick="pick(this,'Not yet, but struggling')">Not yet, but I'm struggling</button>
+        <button class="opt" onclick="pick(this,'Current on payments')">No — I'm current on everything</button>
+      </div>
+      <div class="nav-row">
+        <button class="btn-back" onclick="prev()"><svg viewBox="0 0 24 24"><path d="M19 12H7l5-5-1.4-1.4L3 12l7.6 6.4L12 17l-5-5h12z"/></svg>Back</button>
+      </div>
+    </section>
+
+    <!-- STEP 5: employment -->
+    <section class="step" data-step="5">
+      <h2 class="q">What is your employment status?</h2>
+      <p class="q-sub">Almost done — just one more before your estimate.</p>
+      <div class="opts" data-field="employment">
+        <button class="opt" onclick="pick(this,'Employed full-time')">Employed full-time</button>
+        <button class="opt" onclick="pick(this,'Employed part-time')">Employed part-time</button>
+        <button class="opt" onclick="pick(this,'Self-employed')">Self-employed</button>
+        <button class="opt" onclick="pick(this,'Retired')">Retired</button>
+        <button class="opt" onclick="pick(this,'Not currently working')">Not currently working</button>
+      </div>
+      <div class="nav-row">
+        <button class="btn-back" onclick="prev()"><svg viewBox="0 0 24 24"><path d="M19 12H7l5-5-1.4-1.4L3 12l7.6 6.4L12 17l-5-5h12z"/></svg>Back</button>
+      </div>
+    </section>
+
+    <!-- STEP 6: contact -->
+    <section class="step" data-step="6">
+      <h2 class="q">Great news — you may qualify!</h2>
+      <p class="q-sub">Enter your details to unlock your personalized savings estimate.</p>
+      <form id="leadForm" onsubmit="return submitLead(event)">
+        <div class="row2">
+          <div class="field"><label>First name</label><input name="first_name" required></div>
+          <div class="field"><label>Last name</label><input name="last_name" required></div>
+        </div>
+        <div class="field"><label>Email address</label><input type="email" name="email" required></div>
+        <div class="field"><label>Phone number</label><input type="tel" name="phone" required placeholder="(___) ___-____"></div>
+        <div class="field"><label>State</label>
+          <select name="state" required>
+            <option value="">Select your state…</option>
+            <option>AL</option><option>AK</option><option>AZ</option><option>AR</option><option>CA</option><option>CO</option><option>CT</option><option>DE</option><option>FL</option><option>GA</option><option>HI</option><option>ID</option><option>IL</option><option>IN</option><option>IA</option><option>KS</option><option>KY</option><option>LA</option><option>ME</option><option>MD</option><option>MA</option><option>MI</option><option>MN</option><option>MS</option><option>MO</option><option>MT</option><option>NE</option><option>NV</option><option>NH</option><option>NJ</option><option>NM</option><option>NY</option><option>NC</option><option>ND</option><option>OH</option><option>OK</option><option>OR</option><option>PA</option><option>RI</option><option>SC</option><option>SD</option><option>TN</option><option>TX</option><option>UT</option><option>VT</option><option>VA</option><option>WA</option><option>WV</option><option>WI</option><option>WY</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-green" id="submitBtn">See My Savings Estimate →</button>
+        <p style="font-size:11px;color:var(--muted);margin:12px 0 0;line-height:1.5">
+          By clicking above, I am providing my electronic signature and express written consent for Poet Street Capital and its partners to contact me at the number and email provided (including via autodialer, prerecorded messages, SMS and email) about debt relief options, even if my number is on a Do Not Call list. Consent is not a condition of any purchase. Message &amp; data rates may apply.
+        </p>
+      </form>
+      <div class="nav-row">
+        <button class="btn-back" onclick="prev()"><svg viewBox="0 0 24 24"><path d="M19 12H7l5-5-1.4-1.4L3 12l7.6 6.4L12 17l-5-5h12z"/></svg>Back</button>
+      </div>
+    </section>
+
+    <!-- RESULT -->
+    <section class="step" data-step="7">
+      <div class="result">
+        <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
+        <h2>You're pre-qualified, <span id="fnameOut">friend</span>!</h2>
+        <p style="color:var(--muted);margin:0">Based on your answers, here's what you could save:</p>
+        <div class="est">
+          <div class="lbl">Estimated Potential Savings</div>
+          <div class="big" id="saveOut">$8,000</div>
+          <div class="sub">on approximately <span id="debtOut">$20,000</span> of enrolled debt*</div>
+        </div>
+        <p style="font-weight:700;color:var(--navy);margin:0 0 4px">A certified debt specialist will call you shortly.</p>
+        <p class="fine">Keep an eye on your phone — most members get a call within one business day. In the meantime, gather a rough list of your current balances so we can build your custom plan faster.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Guide -->
+  <div class="guide" id="guide">
+    <img src="img/advisor.jpg" alt="Your debt relief guide">
+    <div class="g-body">
+      <div class="g-name"><span class="dot"></span>Catherine · Debt Relief Guide</div>
+      <span id="guideMsg">Hi there! I'm Catherine. Answer a few quick questions and I'll put together your personalized savings estimate — no impact to your credit score.</span>
+    </div>
+  </div>
+
+  <div class="trust">
+    <span><svg viewBox="0 0 24 24"><path d="M18 8h-1V6A5 5 0 0 0 7 6v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zM9 6a3 3 0 0 1 6 0v2H9V6zm3 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>256-bit SSL Secured</span>
+    <span><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V5l-9-4z"/></svg>Your info stays private</span>
+    <span><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1 15-5-5 1.4-1.4L11 13.2l6.6-6.6L19 8l-8 9z"/></svg>Trusted by thousands</span>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-in">
+    <div class="fbrand"><span class="mark">PS</span>Poet Street Capital</div>
+    <p>Poet Street Capital LLC · 4400 RT 9 South, Suite 1000, Freehold, NJ 07728 · (516) 241-6738</p>
+    <div class="foot-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms &amp; Conditions</a>
+      <a href="#">Do Not Sell My Personal Information</a>
+      <a href="#">Contact</a>
+    </div>
+    <p class="disc">
+      This website is owned and operated by Poet Street Capital LLC. By using this website you agree to our Terms &amp; Conditions and Privacy Policy. Poet Street Capital connects consumers with third-party debt relief, debt settlement, and financial service providers; we are not a lender, law firm, or credit repair organization and do not provide legal or tax advice. We may receive a referral or affiliate fee for connecting you with a provider, and the order in which options are presented may be affected by that compensation. Debt relief program results vary and are not guaranteed. *Savings estimates are illustrative examples based on typical program outcomes and the information you provide; they are not an offer, approval, or guarantee of any specific result. Programs may have tax consequences and may impact your credit score. Not available in all states.
+    </p>
+    <p class="disc">© 2026 Poet Street Capital LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+/* ===== Lead delivery endpoint — paste Google Apps Script /exec URL (or partner endpoint) here ===== */
+var ENDPOINT = '';
+
+var TOTAL = 6;          // question steps before result
+var cur = 1;
+var data = {};
+var guideMsgs = {
+  1:"Hi there! I'm Catherine. Answer a few quick questions and I'll put together your personalized savings estimate — no impact to your credit score.",
+  2:"Perfect. Knowing your debt type helps me match you with the right program.",
+  3:"Thanks! Your income helps us tailor a plan you can actually afford.",
+  4:"You're doing great — this is one of the biggest factors in what you could save.",
+  5:"Last question, then I'll calculate your estimate!",
+  6:"Almost there! Enter your details and I'll unlock your personalized savings estimate.",
+  7:"All done! A certified specialist will reach out shortly to walk you through your options."
+};
+
+function render(){
+  document.querySelectorAll('.step').forEach(function(s){ s.classList.remove('active'); });
+  document.querySelector('.step[data-step="'+cur+'"]').classList.add('active');
+  var pct = Math.min(cur, TOTAL) / TOTAL * 100;
+  document.getElementById('bar').style.width = pct + '%';
+  if(cur <= TOTAL){ document.getElementById('stepLbl').textContent = 'Step '+cur+' of '+TOTAL; }
+  else { document.getElementById('stepLbl').textContent = 'Complete'; document.getElementById('bar').style.width='100%'; }
+  document.getElementById('guideMsg').textContent = guideMsgs[cur] || guideMsgs[6];
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function next(){ if(cur < 7){ cur++; render(); } }
+function prev(){ if(cur > 1){ cur--; render(); } }
+
+function pick(el, val){
+  var field = el.closest('.opts').getAttribute('data-field');
+  data[field] = val;
+  el.closest('.opts').querySelectorAll('.opt').forEach(function(o){ o.classList.remove('sel'); });
+  el.classList.add('sel');
+  setTimeout(next, 220); // auto-advance like the reference funnel
+}
+
+/* slider */
+var debt = document.getElementById('debt');
+function fmt(n){ return '$' + Number(n).toLocaleString('en-US'); }
+function updAmt(){
+  var v = parseInt(debt.value,10);
+  var lbl = v >= 100000 ? '$100,000+' : fmt(v);
+  document.getElementById('amtOut').textContent = lbl;
+  data.debt_amount = lbl;
+}
+debt.addEventListener('input', updAmt);
+updAmt();
+
+function submitLead(e){
+  e.preventDefault();
+  var f = document.getElementById('leadForm');
+  var fd = new FormData(f);
+  fd.append('debt_amount', data.debt_amount || '');
+  fd.append('debt_type', data.debt_type || '');
+  fd.append('monthly_income', data.monthly_income || '');
+  fd.append('behind', data.behind || '');
+  fd.append('employment', data.employment || '');
+  fd.append('_subject', 'New Poet Street Capital Debt Relief Lead');
+  fd.append('page', 'Creditsvr.com Debt Relief Funnel');
+
+  var btn = document.getElementById('submitBtn');
+  btn.textContent = 'Calculating…'; btn.disabled = true;
+
+  function done(){
+    // savings estimate = ~40% of enrolled debt (illustrative)
+    var raw = (data.debt_amount||'').replace(/[^0-9]/g,'');
+    var d = parseInt(raw,10) || 20000;
+    var save = Math.round(d * 0.40 / 100) * 100;
+    document.getElementById('saveOut').textContent = fmt(save);
+    document.getElementById('debtOut').textContent = data.debt_amount || fmt(d);
+    document.getElementById('fnameOut').textContent = (fd.get('first_name')||'friend');
+    cur = 7; render();
+  }
+
+  if(!ENDPOINT){ setTimeout(done, 700); return false; }
+  fetch(ENDPOINT, { method:'POST', body:fd })
+    .then(function(){ done(); })
+    .catch(function(){ done(); });
+  return false;
+}
+render();
+</script>
+</body>
+</html>
