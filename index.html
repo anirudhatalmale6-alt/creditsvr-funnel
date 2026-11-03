@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Debt Relief Advantage — Find Out If You Qualify For Debt Relief in 2026</title>
-<meta name="description" content="See how much you could save with a personalized debt relief estimate. Prequalification takes under 60 seconds and won't affect your credit score.">
+<meta name="description" content="Find out in under 60 seconds whether you may qualify for debt relief. Prequalification won't affect your credit score.">
 <style>
 :root{
   --navy:#0f2f4a; --navy2:#13395a; --navy-soft:#eef4f9;
@@ -194,14 +194,15 @@ footer{background:#0c2438;color:#9fb4c6;margin-top:44px;padding:32px 20px}
 
     <!-- STEP 3: monthly income -->
     <section class="step" data-step="3">
-      <h2 class="q">What is your approximate monthly income?</h2>
-      <p class="q-sub">Include wages, retirement, investments, and any rental income.</p>
+      <h2 class="q">What is your personal monthly income?</h2>
+      <p class="q-sub">Your own income only, not your household's. Include wages, retirement, investments, and any rental income.</p>
       <div class="opts" data-field="monthly_income">
         <button class="opt" onclick="pick(this,'$5,000+')">$5,000+</button>
         <button class="opt" onclick="pick(this,'$4,000 - $5,000')">$4,000 – $5,000</button>
         <button class="opt" onclick="pick(this,'$3,000 - $4,000')">$3,000 – $4,000</button>
         <button class="opt" onclick="pick(this,'$2,000 - $3,000')">$2,000 – $3,000</button>
-        <button class="opt" onclick="pick(this,'$1,000 - $2,000')">$1,000 – $2,000</button>
+        <button class="opt" onclick="pick(this,'$1,501 - $2,000')">$1,501 – $2,000</button>
+        <button class="opt" onclick="pick(this,'$1,500 or less')">$1,500 or less</button>
         <button class="opt" onclick="pick(this,'No monthly income')">I don't have monthly income</button>
       </div>
       <div class="nav-row">
@@ -227,7 +228,7 @@ footer{background:#0c2438;color:#9fb4c6;margin-top:44px;padding:32px 20px}
     <!-- STEP 5: employment -->
     <section class="step" data-step="5">
       <h2 class="q">What is your employment status?</h2>
-      <p class="q-sub">Almost done — just one more before your estimate.</p>
+      <p class="q-sub">Almost done — just one more question.</p>
       <div class="opts" data-field="employment">
         <button class="opt" onclick="pick(this,'Employed full-time')">Employed full-time</button>
         <button class="opt" onclick="pick(this,'Employed part-time')">Employed part-time</button>
@@ -243,23 +244,24 @@ footer{background:#0c2438;color:#9fb4c6;margin-top:44px;padding:32px 20px}
     <!-- STEP 6: contact -->
     <section class="step" data-step="6">
       <h2 class="q">Great news — you may qualify!</h2>
-      <p class="q-sub">Enter your details to unlock your personalized savings estimate.</p>
+      <p class="q-sub">Enter your details to see your options.</p>
       <form id="leadForm" onsubmit="return submitLead(event)">
         <div class="row2">
           <div class="field"><label>First name</label><input name="first_name" required></div>
           <div class="field"><label>Last name</label><input name="last_name" required></div>
         </div>
         <div class="field"><label>Email address</label><input type="email" name="email" required></div>
-        <div class="field"><label>Phone number</label><input type="tel" name="phone" required placeholder="(___) ___-____"></div>
+        <div class="field"><label>Phone number</label><input type="tel" name="phone" required inputmode="numeric" autocomplete="tel-national" placeholder="(___) ___-____"></div>
         <div class="field"><label>State</label>
           <select name="state" required>
             <option value="">Select your state…</option>
             <option>AL</option><option>AK</option><option>AZ</option><option>AR</option><option>CA</option><option>CO</option><option>CT</option><option>DE</option><option>FL</option><option>GA</option><option>HI</option><option>ID</option><option>IL</option><option>IN</option><option>IA</option><option>KS</option><option>KY</option><option>LA</option><option>ME</option><option>MD</option><option>MA</option><option>MI</option><option>MN</option><option>MS</option><option>MO</option><option>MT</option><option>NE</option><option>NV</option><option>NH</option><option>NJ</option><option>NM</option><option>NY</option><option>NC</option><option>ND</option><option>OH</option><option>OK</option><option>OR</option><option>PA</option><option>RI</option><option>SC</option><option>SD</option><option>TN</option><option>TX</option><option>UT</option><option>VT</option><option>VA</option><option>WA</option><option>WV</option><option>WI</option><option>WY</option>
+          <option value="PR">PR</option><option value="GU">GU</option><option value="VI">VI</option>
           </select>
         </div>
-        <button type="submit" class="btn btn-green" id="submitBtn">See My Savings Estimate →</button>
-        <p style="font-size:11px;color:var(--muted);margin:12px 0 0;line-height:1.5">
-          By clicking above, I am providing my electronic signature and express written consent for Debt Relief Advantage (a brand of Poet Street Capital LLC), JG Wentworth, and our <a href="partners.html" target="_blank" style="color:var(--green);text-decoration:underline">marketing partners</a> to contact me at the phone number and email I provided — including via automated telephone dialing systems, prerecorded or artificial voice messages, text messages (SMS/MMS), and email — regarding debt relief and related products and services, even if my number is on a state or national Do Not Call list. Consent is not a condition of any purchase. Message &amp; data rates may apply; reply STOP to opt out, HELP for help. I also agree to the <a href="terms.html" target="_blank" style="color:var(--green);text-decoration:underline">Terms &amp; Conditions</a> and <a href="privacy.html" target="_blank" style="color:var(--green);text-decoration:underline">Privacy Policy</a>.
+        <button type="submit" class="btn btn-green" id="submitBtn">See My Options →</button>
+        <p id="consentText" style="font-size:11px;color:var(--muted);margin:12px 0 0;line-height:1.5">
+          By clicking above, I confirm I am at least 18 years old and a U.S. resident, and I am providing my electronic signature and express written consent for Debt Relief Advantage (a brand of Poet Street Capital LLC), TurboDebt, JG Wentworth, and our <a href="partners.html" target="_blank" style="color:var(--green);text-decoration:underline">marketing partners</a> to contact me at the phone number and email I provided — including via automated telephone dialing systems, prerecorded or artificial voice messages, text messages (SMS/MMS), and email — regarding debt relief and related products and services, even if my number is on a state or national Do Not Call list. Consent is not a condition of any purchase. Message &amp; data rates may apply; reply STOP to opt out, HELP for help. I also agree to the <a href="terms.html" target="_blank" style="color:var(--green);text-decoration:underline">Terms &amp; Conditions</a> and <a href="privacy.html" target="_blank" style="color:var(--green);text-decoration:underline">Privacy Policy</a>.
         </p>
       </form>
       <div class="nav-row">
@@ -271,15 +273,8 @@ footer{background:#0c2438;color:#9fb4c6;margin-top:44px;padding:32px 20px}
     <section class="step" data-step="7">
       <div class="result">
         <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
-        <h2>You're pre-qualified, <span id="fnameOut">friend</span>!</h2>
-        <p style="color:var(--muted);margin:0">Based on your answers, here's what you could save:</p>
-        <div class="est">
-          <div class="lbl">Estimated Potential Savings</div>
-          <div class="big" id="saveOut">$8,000</div>
-          <div class="sub">on approximately <span id="debtOut">$20,000</span> of enrolled debt*</div>
-        </div>
-        <p style="font-weight:700;color:var(--navy);margin:0 0 4px">A certified debt specialist will call you shortly.</p>
-        <p class="fine">Keep an eye on your phone — most members get a call within one business day. In the meantime, gather a rough list of your current balances so we can build your custom plan faster.</p>
+        <h2 id="resultHead">Thanks, <span id="fnameOut">friend</span>!</h2>
+        <p id="resultBody" style="color:var(--muted);margin:0">We've received your details. If one of our partners can help with your situation, they'll be in touch soon.</p>
       </div>
     </section>
 
@@ -290,7 +285,7 @@ footer{background:#0c2438;color:#9fb4c6;margin-top:44px;padding:32px 20px}
     <img src="img/advisor.jpg" alt="Your debt relief guide">
     <div class="g-body">
       <div class="g-name"><span class="dot"></span>Catherine · Debt Relief Guide</div>
-      <span id="guideMsg">Hi there! I'm Catherine. Answer a few quick questions and I'll put together your personalized savings estimate — and prequalifying won't affect your credit score.</span>
+      <span id="guideMsg">Hi there! I'm Catherine. Answer a few quick questions and I'll check which debt relief options may fit you — and prequalifying won't affect your credit score.</span>
     </div>
   </div>
 
@@ -312,27 +307,50 @@ footer{background:#0c2438;color:#9fb4c6;margin-top:44px;padding:32px 20px}
       <a href="privacy.html#dns">Do Not Sell My Personal Information</a>
     </div>
     <p class="disc">
-      Debt Relief Advantage is a brand owned and operated by Poet Street Capital LLC. By using this website you agree to our Terms &amp; Conditions and Privacy Policy. Debt Relief Advantage connects consumers with third-party debt relief, debt settlement, and financial service providers; we are not a lender, law firm, or credit repair organization and do not provide legal or tax advice. We may receive a referral or affiliate fee for connecting you with a provider, and the order in which options are presented may be affected by that compensation. Debt relief program results vary and are not guaranteed. *Savings estimates are illustrative examples based on typical program outcomes and the information you provide; they are not an offer, approval, or guarantee of any specific result. Programs may have tax consequences and may impact your credit score. Not available in all states.
+      Debt Relief Advantage is a brand owned and operated by Poet Street Capital LLC. By using this website you agree to our Terms &amp; Conditions and Privacy Policy. Debt Relief Advantage connects consumers with third-party debt relief, debt settlement, and financial service providers; we are not a lender, law firm, or credit repair organization and do not provide legal or tax advice. We may receive a referral or affiliate fee for connecting you with a provider, and the order in which options are presented may be affected by that compensation. Debt relief program results vary and are not guaranteed. Programs may have tax consequences and may impact your credit score. Not available in all states.
     </p>
     <p class="disc">© 2026 Poet Street Capital LLC. All rights reserved.</p>
   </div>
 </footer>
 
+<!-- TrustedForm (ActiveProspect). TurboDebt's posting spec requires a TrustedForm
+     certificate with every lead. The script records what the visitor saw and agreed
+     to, and writes the certificate URL into a hidden xxTrustedFormCertUrl field. The
+     buyer claims the certificate with their own key, so nothing account-specific
+     belongs on this page. -->
+<script type="text/javascript">
+(function(){
+  var field='xxTrustedFormCertUrl', provideReferrer=false;
+  var tf=document.createElement('script'); tf.type='text/javascript'; tf.async=true;
+  tf.src='https://api.trustedform.com/trustedform.js'
+       + '?provide_referrer='+encodeURIComponent(provideReferrer)
+       + '&field='+encodeURIComponent(field)
+       + '&l='+new Date().getTime()+Math.random();
+  var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf,s);
+})();
+</script>
 <script>
-/* ===== Lead delivery endpoint — paste Google Apps Script /exec URL (or partner endpoint) here ===== */
-var ENDPOINT = '';
+/* ===== Lead delivery =====
+   ENDPOINT is the Google Apps Script web app (DebtReliefAdvantage-TurboDebt.gs).
+   It saves every lead to the client's sheet, decides whether it meets TurboDebt's
+   terms, posts the qualifying ones with the partner token (which lives only in
+   that script, never on this public page), and answers with TurboDebt's
+   live-chat link. Empty until the client deploys the script. */
+var ENDPOINT    = '';
+var LEAD_SECRET = 'dra-6Qm9VbT2xKp4LwZ8';   // must match the script
+var CALL_NUMBER = '(848) 863-6987';
 
 var TOTAL = 6;          // question steps before result
 var cur = 1;
 var data = {};
 var guideMsgs = {
-  1:"Hi there! I'm Catherine. Answer a few quick questions and I'll put together your personalized savings estimate — and prequalifying won't affect your credit score.",
+  1:"Hi there! I'm Catherine. Answer a few quick questions and I'll check which debt relief options may fit you — and prequalifying won't affect your credit score.",
   2:"Perfect. Knowing your debt type helps me match you with the right program.",
   3:"Thanks! Your income helps us tailor a plan you can actually afford.",
-  4:"You're doing great — this is one of the biggest factors in what you could save.",
-  5:"Last question, then I'll calculate your estimate!",
-  6:"Almost there! Enter your details and I'll unlock your personalized savings estimate.",
-  7:"All done! A certified specialist will reach out shortly to walk you through your options."
+  4:"You're doing great — this helps us see which programs fit your situation.",
+  5:"Last question!",
+  6:"Almost there! Enter your details and I'll check your options.",
+  7:"All done — thank you!"
 };
 
 function render(){
@@ -364,40 +382,139 @@ function updAmt(){
   var lbl = v >= 100000 ? '$100,000+' : fmt(v);
   document.getElementById('amtOut').textContent = lbl;
   data.debt_amount = lbl;
+  data.debt_int = v;     // TurboDebt wants a plain integer
 }
 debt.addEventListener('input', updAmt);
 updAmt();
 
+/* Visitor IP. TurboDebt requires it on every lead, and a static page cannot see
+   it any other way. Looked up as soon as the page loads so it is ready by submit. */
+var visitorIp = '';
+function lookupIp(){
+  function get(u){ return fetch(u, {cache:'no-store'}).then(function(r){ return r.json(); })
+                     .then(function(j){ if (j && j.ip) visitorIp = String(j.ip); }); }
+  return get('https://api64.ipify.org?format=json')
+    .catch(function(){ return get('https://api.ipify.org?format=json'); })
+    .catch(function(){});
+}
+lookupIp();
+
+/* sub1, which TurboDebt reads as "sourceid_secondaryid". Point an ad at
+   ?utm_source=fb&utm_campaign=<campaign or ad set> and it arrives as fb_<campaign>.
+   A ready-made ?sub1= on the landing URL wins if present. */
+function qp(k){
+  var m = new RegExp('[?&]' + k + '=([^&#]*)').exec(location.search);
+  if (!m) return '';
+  try { return decodeURIComponent(m[1].replace(/\+/g, ' ')); } catch (x) { return m[1]; }
+}
+function token(v){ return String(v || '').replace(/[^A-Za-z0-9.]/g, '').slice(0, 40); }
+function buildSub1(){
+  var direct = String(qp('sub1')).replace(/[^A-Za-z0-9._-]/g, '').slice(0, 80);
+  if (direct) return direct;
+  var src = token(qp('utm_source')) || 'dra';
+  var sec = token(qp('utm_campaign')) || token(qp('utm_content')) || 'direct';
+  return src + '_' + sec;
+}
+
+function phone10(v){
+  var d = String(v || '').replace(/\D/g, '');
+  if (d.length === 11 && d.charAt(0) === '1') d = d.slice(1);
+  return d;
+}
+
+function showResult(head, body){
+  document.getElementById('resultHead').textContent = head;
+  document.getElementById('resultBody').textContent = body;
+  cur = 7; render();
+}
+
 function submitLead(e){
   e.preventDefault();
   var f = document.getElementById('leadForm');
-  var fd = new FormData(f);
-  fd.append('debt_amount', data.debt_amount || '');
-  fd.append('debt_type', data.debt_type || '');
-  fd.append('monthly_income', data.monthly_income || '');
-  fd.append('behind', data.behind || '');
-  fd.append('employment', data.employment || '');
-  fd.append('_subject', 'New Debt Relief Advantage Lead');
-  fd.append('page', 'Creditsvr.com Debt Relief Funnel');
+  var first = f.elements.first_name.value.trim();
+
+  var ph = phone10(f.elements.phone.value);
+  f.elements.phone.setCustomValidity(ph.length === 10 ? '' : 'Please enter a 10-digit U.S. phone number.');
+  if (!f.reportValidity()) return false;
 
   var btn = document.getElementById('submitBtn');
-  btn.textContent = 'Calculating…'; btn.disabled = true;
+  btn.textContent = 'Checking…'; btn.disabled = true;
 
-  function done(){
-    // savings estimate = ~40% of enrolled debt (illustrative)
-    var raw = (data.debt_amount||'').replace(/[^0-9]/g,'');
-    var d = parseInt(raw,10) || 20000;
-    var save = Math.round(d * 0.40 / 100) * 100;
-    document.getElementById('saveOut').textContent = fmt(save);
-    document.getElementById('debtOut').textContent = data.debt_amount || fmt(d);
-    document.getElementById('fnameOut').textContent = (fd.get('first_name')||'friend');
-    cur = 7; render();
+  /* Not connected yet: say so. Thanking the visitor here would mean their details
+     went nowhere while they believed they had applied. */
+  if (!ENDPOINT){
+    showResult("Sorry, we can't take applications online right now",
+               'Please call us on ' + CALL_NUMBER + ' and we will help you directly.');
+    return false;
   }
 
-  if(!ENDPOINT){ setTimeout(done, 700); return false; }
-  fetch(ENDPOINT, { method:'POST', body:fd })
-    .then(function(){ done(); })
-    .catch(function(){ done(); });
+  function send(){
+    var tf = document.querySelector('[name="xxTrustedFormCertUrl"]');
+    var fd = new FormData();
+    fd.append('secret', LEAD_SECRET);
+    fd.append('firstname', first);
+    fd.append('lastname', f.elements.last_name.value.trim());
+    fd.append('email', f.elements.email.value.trim());
+    fd.append('phone', ph);
+    fd.append('state', f.elements.state.value);
+    fd.append('debt_amount', String(data.debt_int || ''));
+    fd.append('debt_type', data.debt_type || '');
+    fd.append('monthly_income', data.monthly_income || '');
+    fd.append('behind', data.behind || '');
+    fd.append('employment', data.employment || '');
+    fd.append('ip', visitorIp);
+    // The exact words on screen, so what is stored is what the visitor agreed to.
+    fd.append('tcpa', document.getElementById('consentText').textContent.replace(/\s+/g, ' ').trim());
+    fd.append('trustedform', tf ? tf.value : '');
+    fd.append('sub1', buildSub1());
+    fd.append('page_url', location.href);
+    fd.append('user_agent', navigator.userAgent);
+
+    var finished = false;
+    function thanks(){
+      if (finished) return; finished = true;
+      showResult('Thanks, ' + (first || 'friend') + '!',
+                 "We've received your details. If one of our partners can help with your situation, they'll be in touch soon.");
+    }
+    function failed(){
+      if (finished) return; finished = true;
+      showResult('Sorry, something went wrong',
+                 'Your details may not have reached us. Please call ' + CALL_NUMBER + ' and we will help you directly.');
+    }
+    // A slow reply usually means the lead is saved and the post to TurboDebt is
+    // still running, so after 15s the visitor is thanked rather than left waiting.
+    var giveUp = setTimeout(thanks, 15000);
+
+    fetch(ENDPOINT, { method: 'POST', body: fd })
+      .then(function(r){ return r.json(); })
+      .then(function(res){
+        clearTimeout(giveUp);
+        if (finished) return;
+        if (res && (res.status === 'success' || res.status === 'test') && res.redirect_url){
+          finished = true;
+          showResult('Connecting you with a debt specialist…', 'One moment while we open your live chat.');
+          /* TurboDebt: "PLEASE DO NOT ALTER OUR POST RESPONSE REDIRECT URLS VALUE IN
+             ANY WAY" - their chat agents find the lead by that exact link, and
+             attribution is lost if one character changes. Assigned as received. */
+          window.location.href = res.redirect_url;
+        } else if (res && res.ok) {
+          thanks();
+        } else {
+          failed();
+        }
+      })
+      .catch(function(){ clearTimeout(giveUp); failed(); });
+  }
+
+  // TrustedForm and the IP lookup both load asynchronously. Give them up to 3s
+  // to finish before sending, rather than posting a lead TurboDebt must reject.
+  var waited = 0;
+  (function ready(){
+    var tf = document.querySelector('[name="xxTrustedFormCertUrl"]');
+    if ((visitorIp && tf && tf.value) || waited >= 3000) return send();
+    if (!visitorIp && waited === 0) lookupIp();
+    waited += 250; setTimeout(ready, 250);
+  })();
   return false;
 }
 render();
